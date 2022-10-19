@@ -15,8 +15,10 @@ function getRandomNum() {
   return Math.floor(Math.random() * 10) + 300;
 }
 //returns the user input from index
+/*
 const resultList = document.getElementById("results");
 new URLSearchParams(window.location.search).forEach((value) => {
   resultList.append(`${value}`);
   resultList.append(document.createElement("br"));
 });
+*/
