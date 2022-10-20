@@ -1,6 +1,10 @@
 * {
   margin: auto;
   padding: 0;
+  font-family: "Comfortaa", cursive;
+}
+.container {
+  margin-top: 500px;
 }
 .outercircle {
   background-color: black;
@@ -43,4 +47,47 @@
   margin-left: 60px;
   text-align: center;
   font-size: 90px;
+}
+
+.reveal {
+  margin-top: 50px;
+  width: 35%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation: fadeIn 1.2s both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+form {
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#answers {
+  display: flex;
+  margin-top: 100px;
+  margin-left: 300px;
+  gap: 50px;
+}
+#randomPic {
+  margin-bottom: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+}
+
+.reset {
+  height: 50px;
 }

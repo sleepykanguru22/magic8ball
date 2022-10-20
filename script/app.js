@@ -30,8 +30,16 @@ function ask(event) {
 
   let answerDiv = document.createElement("div");
   answerDiv.setAttribute("id", "answers");
-  answerDiv.textContent = `${question.value}`;
-  container.replaceChild(answerDiv, container.childNodes[5]);
+  answerDiv.textContent = ` Your question: ${question.value}`;
+  container.replaceChild(answerDiv, container.childNodes[1]);
+
+  //   let refresh = document.createElement("div");
+  //   refresh.setAttribute("type", "reset");
+  let refresh = document.createElement("button");
+  refresh.setAttribute("onClick", "window.location.reload()");
+  refresh.setAttribute("class", "reset btn btn-outline-dark rounded-circle");
+  refresh.textContent = `reset`;
+  answerDiv.append(refresh);
 
   getRandomPic();
 }
