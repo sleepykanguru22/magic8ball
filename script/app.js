@@ -21,20 +21,29 @@ function getRandomNum() {
   return Math.floor(Math.random() * 10) + 300;
 }
 
+//remove h1
+function removeH1() {
+  let title = document.getElementById("hide");
+  title.remove(title[0]);
+}
+
 function ask(event) {
   event.preventDefault();
+
+  //selects the form and user input
   let input = document.querySelector("#askForm");
   console.log(question.value);
 
+  //selects the parent element
   let container = document.querySelector(".container");
 
+  //creates the answer div and replaces the form with user input
   let answerDiv = document.createElement("div");
   answerDiv.setAttribute("id", "answers");
   answerDiv.textContent = ` Your question: ${question.value}`;
-  container.replaceChild(answerDiv, container.childNodes[1]);
+  container.replaceChild(answerDiv, container.childNodes[3]);
 
-  //   let refresh = document.createElement("div");
-  //   refresh.setAttribute("type", "reset");
+  //creates button to refresh the page
   let refresh = document.createElement("button");
   refresh.setAttribute("onClick", "window.location.reload()");
   refresh.setAttribute("class", "reset btn btn-outline-dark rounded-circle");
@@ -42,6 +51,7 @@ function ask(event) {
   answerDiv.append(refresh);
 
   getRandomPic();
+  removeH1();
 }
 
 let form = document.querySelector("form");
