@@ -5,7 +5,7 @@ function getRandomPic() {
   const unsplashURL = "https://source.unsplash.com/random/";
   //creating the img and img source on the dom
   const imgDiv = document.createElement("div");
-  imgDiv.setAttribute("id", "randomPic");
+  imgDiv.id = "randomPic";
   const img = document.createElement("img");
   img.src = `${unsplashURL}${getRandomSize}`;
   imgDiv.appendChild(img);
@@ -39,31 +39,40 @@ function ask(event) {
 
   //creates the answer div and replaces the form with user input
   let answerDiv = document.createElement("div");
-  answerDiv.setAttribute("id", "answers");
+  //   answerDiv.setAttribute("id", "answers");
+  answerDiv.id = "answers";
 
   //content div
   let content = document.createElement("div");
-
+  content.className = "content";
   answerDiv.append(content);
 
   //returns user input as h2
   let userInput = document.createElement("h2");
-  userInput.setAttribute("class", "response bg-primary rounded");
+  //another way to set attribute :
+  userInput.className = "response bg-primary rounded";
   userInput.textContent = ` question:\n ${question.value}`;
   content.append(userInput);
-
+  //how to find childNodes
+  //console.log(container.parentElement.children)
   container.replaceChild(answerDiv, container.childNodes[3]);
+  console.log(container.children);
 
   //creates button to refresh the page
   let refresh = document.createElement("button");
   refresh.setAttribute("onClick", "window.location.reload()");
-  refresh.setAttribute("class", "reset btn btn-outline-dark");
+  refresh.className = "reset btn btn-outline-dark";
   refresh.textContent = `reset`;
   content.append(refresh);
 
   getRandomPic();
   removeH1();
 }
-
+//addEventListner takes in ( a string, and callback)
+//removeEventListner(string, callback)
 let form = document.querySelector("form");
 form.addEventListener("submit", ask);
+
+//how to add styles examples:
+//document.body.style.fontSize = "50px";
+//document.body.style.backgroundColor = "black";

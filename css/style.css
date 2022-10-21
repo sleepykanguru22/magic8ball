@@ -8,6 +8,7 @@ body {
 }
 .container {
   margin-top: 500px;
+  margin-bottom: 500px;
 }
 .outercircle {
   background-color: black;
@@ -105,4 +106,35 @@ img {
   margin-top: 20px;
   height: 70px;
   border-radius: 50%;
+}
+/* if the width is not larger than X width*/
+@media (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+  #answers {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+  }
+
+  .content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .response {
+    width: 350px;
+    object-fit: cover;
+  }
+  .reset {
+    margin-top: 50px;
+    width: 20%;
+    align-self: center;
+  }
 }
