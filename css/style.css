@@ -5,10 +5,11 @@
 }
 body {
   background-color: rgb(154, 183, 209);
+  overflow: hidden;
 }
 .container {
   margin-top: 500px;
-  margin-bottom: 500px;
+  margin-bottom: 200px;
 }
 .outercircle {
   background-color: black;
@@ -55,7 +56,7 @@ body {
 
 .reveal {
   background-color: white;
-  margin-top: 50px;
+  margin-top: 20px;
   width: 35%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation: fadeIn 1.2s both;
@@ -75,12 +76,13 @@ body {
 form {
   width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation: fadeIn 1.5s both;
 }
 #answers {
   background-color: antiquewhite;
   display: flex;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  /* margin-top: 300px; */
+  /* margin-bottom: 100px; */
   justify-content: center;
   gap: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -115,6 +117,14 @@ img {
     justify-content: center;
     width: 100%;
     margin: 0;
+  }
+  .reveal {
+    font-size: 20px;
+    width: 60%;
+    text-align: center;
+  }
+  label {
+    margin-left: 30px;
   }
   #answers {
     display: flex;

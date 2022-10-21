@@ -55,7 +55,7 @@ function ask(event) {
   content.append(userInput);
   //how to find childNodes
   //console.log(container.parentElement.children)
-  container.replaceChild(answerDiv, container.childNodes[3]);
+  container.replaceChild(answerDiv, container.childNodes[5]);
   console.log(container.children);
 
   //creates button to refresh the page
