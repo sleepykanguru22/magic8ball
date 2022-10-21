@@ -3,6 +3,9 @@
   padding: 0;
   font-family: "Comfortaa", cursive;
 }
+body {
+  background-color: rgb(154, 183, 209);
+}
 .container {
   margin-top: 500px;
 }
@@ -50,6 +53,7 @@
 }
 
 .reveal {
+  background-color: white;
   margin-top: 50px;
   width: 35%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -72,13 +76,17 @@ form {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #answers {
+  background-color: antiquewhite;
   display: flex;
   margin-top: 100px;
-  margin-left: 300px;
-  gap: 50px;
+  margin-bottom: 100px;
+  justify-content: center;
+  gap: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #randomPic {
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -87,7 +95,14 @@ img {
   width: 350px;
   object-fit: cover;
 }
-
+.response {
+  color: white;
+  inline-size: 500px;
+  overflow-wrap: break-word;
+}
 .reset {
-  height: 50px;
+  overflow: hidden;
+  margin-top: 20px;
+  height: 70px;
+  border-radius: 50%;
 }

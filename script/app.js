@@ -40,15 +40,26 @@ function ask(event) {
   //creates the answer div and replaces the form with user input
   let answerDiv = document.createElement("div");
   answerDiv.setAttribute("id", "answers");
-  answerDiv.textContent = ` Your question: ${question.value}`;
+
+  //content div
+  let content = document.createElement("div");
+
+  answerDiv.append(content);
+
+  //returns user input as h2
+  let userInput = document.createElement("h2");
+  userInput.setAttribute("class", "response bg-primary rounded");
+  userInput.textContent = ` question:\n ${question.value}`;
+  content.append(userInput);
+
   container.replaceChild(answerDiv, container.childNodes[3]);
 
   //creates button to refresh the page
   let refresh = document.createElement("button");
   refresh.setAttribute("onClick", "window.location.reload()");
-  refresh.setAttribute("class", "reset btn btn-outline-dark rounded-circle");
+  refresh.setAttribute("class", "reset btn btn-outline-dark");
   refresh.textContent = `reset`;
-  answerDiv.append(refresh);
+  content.append(refresh);
 
   getRandomPic();
   removeH1();
