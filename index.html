@@ -33,13 +33,19 @@
         <div class="form-control d">
           <label for="question">Ask me anything!</label>
           <input type="text" name="question" id="question" />
-          <button type="submit" class="btn btn-primary p-3 rounded-circle">
+          <button type="submit" class="btn btn-primary mt-1 p-3 rounded-circle">
             Ask
           </button>
         </div>
       </form>
-      <button id="likeBtn" class="btn mt-2 btn-dark" type="submit">Like</button>
-      <div id="counter"></div>
+      <div class="d-flex mt-2">
+        <div class="link-container m-1">
+          <p class="link">https://example.com/share</p>
+          <button class="btn btn-dark copy-btn">copy</button>
+        </div>
+        <button id="likeBtn" class="btn btn-dark" type="submit">Like</button>
+        <div id="counter" class="m-2"></div>
+      </div>
     </div>
   </body>
 </html>

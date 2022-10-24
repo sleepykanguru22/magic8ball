@@ -1,9 +1,10 @@
 //selects the parent element
 const container = document.querySelector(".container");
+
+//like button counter
 let btnLikes = document.getElementById("likeBtn");
 let count = document.getElementById("counter");
 let c = 0;
-
 count.innerText = `${c}`;
 
 function getRandomPic() {
@@ -75,11 +76,6 @@ function ask(event) {
 }
 //addEventListner takes in ( a string, and callback)
 //removeEventListner(string, callback)
-// let formLikes = document.querySelector("#likeBtn");
-// formLikes.addEventListener("click", () => {
-//   counter++;
-//   likedBtn();
-// });
 
 btnLikes.addEventListener("click", () => {
   c++;
