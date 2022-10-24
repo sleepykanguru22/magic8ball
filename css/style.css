@@ -109,6 +109,9 @@ img {
   height: 70px;
   border-radius: 50%;
 }
+a {
+  color: #000;
+}
 
 /* if the width is not larger than X width*/
 @media (max-width: 800px) {
