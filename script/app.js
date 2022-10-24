@@ -1,3 +1,11 @@
+//selects the parent element
+const container = document.querySelector(".container");
+let btnLikes = document.getElementById("likeBtn");
+let count = document.getElementById("counter");
+let c = 0;
+
+count.innerText = `${c}`;
+
 function getRandomPic() {
   //select answer div
   const answers = document.querySelector("#answers");
@@ -34,9 +42,6 @@ function ask(event) {
   let input = document.querySelector("#askForm");
   console.log(question.value);
 
-  //selects the parent element
-  let container = document.querySelector(".container");
-
   //creates the answer div and replaces the form with user input
   let answerDiv = document.createElement("div");
   //   answerDiv.setAttribute("id", "answers");
@@ -70,6 +75,17 @@ function ask(event) {
 }
 //addEventListner takes in ( a string, and callback)
 //removeEventListner(string, callback)
+// let formLikes = document.querySelector("#likeBtn");
+// formLikes.addEventListener("click", () => {
+//   counter++;
+//   likedBtn();
+// });
+
+btnLikes.addEventListener("click", () => {
+  c++;
+  count.innerText = `${c}`;
+});
+
 let form = document.querySelector("form");
 form.addEventListener("submit", ask);
 
